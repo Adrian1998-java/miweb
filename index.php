@@ -9,6 +9,7 @@
     <h1>Bienvenido a mi Web</h1>
     <?php 
         echo "¡Hola Mundo! Esta es mi primera página web";
+        echo "Aquí va otro hola mundo";
     ?>
 </body>
 </html>
