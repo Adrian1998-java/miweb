@@ -28,6 +28,23 @@ if($num > 0){
     echo "<h3>El valor de $num es menor que 0</h3>";
 }
 
+//Sentencia Switch
+echo "<h3>Ejecutando sentencia Switch:</h3>";
+switch($num){
+    case 0:
+        echo "El valor es igual a 0";
+        break;
+    case 1:
+        echo "El valor es igual a 1";
+        break;
+    case 2:
+        echo "El valor es igual a 2";
+        break;
+    default:
+        echo "El valor no es igual a 0 ni 1 ni 2";
+        break;
+    }
+
 
 echo "</body></html>";
 
