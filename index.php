@@ -1,31 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Web</title>
-</head>
-<body>
-    <h1>Bienvenido a mi Web</h1>
-    <?php 
-        echo "¡Hola Mundo! Esta es mi primera página web";
-        echo "<br>";
-        echo "Aquí va otro hola mundo";
+<?php 
+echo "<html><head><title>Deciciones</title></head><body>";
+$num = -3;
+$num2 = "5";
+/*
+Operadores de comparación
+> < >= <= 
+== igualdad
+!= desigualdad
+=== igualdad estricta
+!== desigualdad estricta
 
-        $num1 = 10;
-        $num2 = 2;
+*/
+// Sentencia if-else
+echo "<h3>Ejecutando sentencia if:</h3>";
+if($num > 4){
+    echo "El valor de $num es mayor a 4";
+} else {
+    echo "El valor de $num es menor o igual a 4";
+}
+// Sentencia if-elseif-else
+echo "<h3>Ejecutando sentencia if:</h3>";
+if($num > 0){
+    echo "<h3>El valor de $num es mayor que 0</h3>";
+} else if($num == 0){
+    echo "<h3>El valor de $num es igual a 0</h3>";
+} else {
+    echo "<h3>El valor de $num es menor que 0</h3>";
+}
 
-        $suma = $num1 + $num2;
-        echo "La suma de $num1 y $num2 es: $suma";
-        
-        $resta = $num1 - $num2;
-        echo "La resta de $num1 y $num2 es: $resta";
-        
-        $multiplicacion = $num1 * $num2;
-        echo "El producto de $num1 y $num2 es: $multiplicacion";
-        
-        $division = $num1 * $num2;
-        echo "La division de $num1 y $num2 es: $division";
-        ?>
-</body>
-</html>
+
+echo "</body></html>";
+
+?>
