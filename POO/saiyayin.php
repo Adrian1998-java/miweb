@@ -4,8 +4,10 @@ class Saiyajin{
     public string $nombre = "Goku";
     public int $nivel_pelea = 9000;
 
-    public function __construct(){
+    public function __construct($nombre = "Goku" , $nivel_pelea = 9000){
         echo "Método constructor ejecutado <br>";
+        $this->nombre = $nombre;
+        $this->nivel_pelea = $nivel_pelea;
     }
 
     public function Saludar()
@@ -22,23 +24,5 @@ class Saiyajin{
     }
 
 }
-
-$goku = new Saiyajin();
-var_dump($goku->Saludar());
-echo "<br>";
-var_dump($goku->NivelPelea());
-echo "<br>";
-var_dump($goku->SaludoCompleto());
-
-echo "<br>";
-echo $goku->SaludoCompleto();
-
-
-
-echo "<br>";
-$vegeta = new Saiyajin();
-var_dump($vegeta);
-echo "<br>";
-
 
 ?>
