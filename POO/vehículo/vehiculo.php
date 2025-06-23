@@ -53,7 +53,7 @@ class Moto extends Vehiculo{
         $this-> tamaño = $tamaño;
     }
     public function mostrarInfo(){
-        return "El color del vehículo es: $this-> color y la marca es: $this-> marca, la cilindrada es: $this-> cilindrada y el tamaño es: $this-> tamaño";
+        echo "El color del vehículo es: {$this-> color} y la marca es: {$this-> marca}, la cilindrada es: {$this-> cilindrada} y el tamaño es: {$this-> tamaño}";
     }
 }
 
