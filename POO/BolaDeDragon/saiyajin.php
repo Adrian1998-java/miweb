@@ -1,10 +1,8 @@
 <?php
 //Saiyajin definición clase
 class Saiyajin{
-    public string $nombre = "Goku";
-    public int $nivel_pelea = 9000;
 
-    public function __construct($nombre = "Goku" , $nivel_pelea = 9000){
+    public function __construct(public string $nombre = "Goku" , public int $nivel_pelea = 9000){
         echo "Método constructor ejecutado <br>";
         $this->nombre = $nombre;
         $this->nivel_pelea = $nivel_pelea;
@@ -24,5 +22,7 @@ class Saiyajin{
     }
 
 }
+
+
 
 ?>

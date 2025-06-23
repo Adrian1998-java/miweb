@@ -1,5 +1,5 @@
 <?php
-require_once "saiyayin.php";
+require_once "supersaiyajin.php";
 
 $goku = new Saiyajin();
 var_dump($goku->Saludar());
@@ -11,8 +11,6 @@ var_dump($goku->SaludoCompleto());
 echo "<br>";
 echo $goku->SaludoCompleto();
 
-
-
 echo "<br>";
 $vegeta = new Saiyajin();
 $vegeta->nombre = "Vegetta";
@@ -23,5 +21,10 @@ echo "<br>";
 //Otra forma de asignar variables de objetos 
 $broly = new Saiyajin("Broly", 9500);
 echo $broly->SaludoCompleto();
+
+echo "<br>";
+$gohan = new SuperSaiyajin("Gohan", 10000);
+echo $gohan->SaludoCompleto();
+echo $gohan->Transformar();
 
 ?>
