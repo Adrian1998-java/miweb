@@ -1,7 +1,7 @@
 <?php
 require_once "banco.php";
 
-$cuentaBancaria = new CuentaBancaria("Yo", 1000);
+$cuentaBancaria = new CuentaBancaria("Tu", 1000);
 $cuentaBancaria-> depositar(500);
 $cuentaBancaria-> retirar(200);
 $cuentaBancaria-> mostrarSaldo();
