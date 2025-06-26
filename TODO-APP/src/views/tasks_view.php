@@ -15,9 +15,9 @@
         <button type="submit">Agregar</button>
     </form>
     <ul>
-        <?php foreach($tasks as $task): ?>
-            <li> <?php echo htmlspecialchars($task->getDescription()) ?> </li>
-            <?php endforeach; ?>
-        </ul>
+    <?php foreach($tasks as $task): ?>
+        <li> <?php echo htmlspecialchars($task->getDescription()) ?> </li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>
