@@ -30,15 +30,17 @@ use TodoApp\Controllers\TaskController;
 
 $controller  = new TaskController();
 
-$action = isset($_GET['action']) ? $_GET['action'] : 'index';
+$controller->handleRequest();
 
-switch($action)
-{
-    case 'add':
-        $controller->addTask();
-        break;
-    default: 
-        $controller->index();
-        break;
-}
+// $action = isset($_GET['action']) ? $_GET['action'] : 'index';
+
+// switch($action)
+// {
+//     case 'add':
+//         $controller->addTask();
+//         break;
+//     default: 
+//         $controller->index();
+//         break;
+// }
 
