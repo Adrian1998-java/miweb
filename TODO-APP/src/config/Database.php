@@ -5,29 +5,35 @@ namespace TodoApp\Config;
 use PDO;
 use PDOException;
 
-class Database{
-    private static $tasks = [];
+require_once __DIR__.'\config_db.php';    
 
-    private static $host = "localhost";
-    private static $db = "todo_app";
-    private static $user = "root";
-    private static $pass = "";
+class Database{
+    // private static $tasks = [];
+    // private static $host = "localhost";
+    // private static $db = "todo_app";
+    // private static $user = "root";
+    // private static $pass = "";
     private static $pdo = null;
 
     public static function connect(){
-        if(self::$pdo === null)
-        {
-            $dns = "mysql:host=" . self::$host . "; dbname=" . self::$db;
-            try{
-                self::$pdo = new PDO($dns, self::$user, self::$pass);
-                self::$pdo->setAttribute(PDO::ATTR_ERRORMODE, PDO::ERROMODE_EXCEPTION);
-            } catch(PDOException $e) {
-                die ("Error en la conexión: " . $e-> getMessage());
+        if (self::$pdo === null) {
+            $dsn = "mysql:host=".DB_HOST.";dbname=".DB_NAME;
+            try {
+                self::$pdo = new PDO($dsn,DB_USER,DB_PASS);
+                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $e){
+                if(str_contains($e->getMessage(), 'Unknow database'))
+                {
+                    echo "<h3 style='color:red;'>La base de datos <strong>".DB_NAME."</strong> no existe</h3>";
+                    echo "<p><a href'/todo-app/create_db.php'> Crear base de datos automaticamente</a></p>";
+                }
+                else{
+                    die ("Error en la conexión: " . $e->getMessage());
+                }
             }
         }
-
         return self::$pdo;
-
+    }
     // public static function getTasks(){
     //     // return self::$tasks;
     //     session_start();
@@ -42,6 +48,5 @@ class Database{
     //     }
     //     $_SESSION['tasks'][] = $task;
     // }
-    }
 }
 ?> 

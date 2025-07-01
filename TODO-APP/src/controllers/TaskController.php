@@ -8,7 +8,7 @@ class TaskController {
 
     public function handleRequest()
     {
-        if($_SERVER['REQUEST_METHOD' === 'POST'])
+        if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
             if(isset($_POST['description']) && !empty(trim($_POST['description'])))
             {
