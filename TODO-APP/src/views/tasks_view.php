@@ -44,6 +44,7 @@
                             <a href="?delete=<?php echo $task['id'] ?>" class="btn btn-sm btn-danger">
                                 Eliminar 
                             </a>
+                            
                         </td>
                     </tr>
                 <?php endforeach; ?>

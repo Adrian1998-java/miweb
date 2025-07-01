@@ -12,7 +12,7 @@ try{
     $pdo->exec("CREATE TABLE IF NOT EXISTS task(
     id INT AUTO_INCREMENT PRIMARY KEY,
     descripcion VARCHAR(255),
-    completed BOOLEAN DEFAULT 0,
+    completed BOOLEAN DEFAULT 0
     )");
     echo "<h3 style='color:green'>Base de datos y tabla creada</h3>";
     echo "<p><a href='index.php'>Volver a la aplicación</a></p>";
